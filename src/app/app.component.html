@@ -1,0 +1,62 @@
+<div class="container">
+  <nav class="navbar" style="background-color: #187605;" data-bs-theme="dark">
+    <div class="container-fluid">
+      <img src="./assets/logo.png" height="28px">
+      <a class="navbar-brand" href="#"> {{ title }}</a>
+      
+    </div>
+  </nav>
+<hr>
+
+<form class="row">
+ <div class="form group col-md-5">
+    <label for="nombreCancion">Nombre Cancion</label>
+    <input type="text" name="nombreCancion" id="nombreCancion" placeholder="Nombre de la cancion" class="form-control" [(ngModel)]="nombreCancionInput">
+ </div>
+ <div class="form group col-md-3">
+  <label for="nombreAutor">Nombre del autor</label>
+  <input type="text" name="nombreAutor" id="nombreAutor" placeholder="Nombre del autor" class="form-control "  [(ngModel)]="nombreAutorInput">
+</div>
+<div class="form group col-md-2">
+  <label for="fechaPublicacion">Fecha de publicación</label>
+  <input type="date" name="fechaPublicacion" id="fechaPublicacion" placeholder="Fecha de fechaPublicacion" class="form-control "  [(ngModel)]="fechaPublicacionInput">
+</div>
+<div class="form group col-md-3">
+  <label for="generoCancion">Genero canción</label>
+  <input type="text" name="generoCancion" id="generoCancion" placeholder="Genero cancion" class="form-control "  [(ngModel)]="generoInput">
+</div>
+<div class="form group col-md-5">
+  <label for="descripcionCancion">Nombre del autor</label>
+  <input type="text" name="descripcionCancion" id="descripcionCancion" placeholder="Descripcion de la cancion" class="form-control "  [(ngModel)]="descripcionInput">
+</div>
+
+</form>
+<button type="submit" id="agregar" class="btn btn-success" (click)="agregarCancion()">Agregar Cancion </button>
+
+<hr>
+
+<!-- Se crea una tabla para que se puedan visualizar los datos -->
+<table class="styled-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nombre de la canción</th>
+      <th>Nombre del autor</th>
+      <th>Fecha</th>
+      <th>Género</th>
+      <th>Descripción</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cancion of canciones; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ cancion.nombreCancion }}</td>
+      <td>{{ cancion.nombreAutor }}</td>
+      <td>{{ cancion.fecha }}</td>
+      <td>{{ cancion.genero }}</td>
+      <td>{{ cancion.descripcion }}</td>
+    </tr>
+  </tbody>
+</table>
+
+</div> <!-- div  final -->

@@ -1,0 +1,46 @@
+
+.container{
+margin-top: 10px;
+}
+.imagen{
+    background-image: url("src/img/logo.png");
+}
+.form{
+background-color: #f7efef80;
+border-radius: 20px;
+padding: 15px;
+margin: 10px;
+
+}
+.btn{
+padding: 10px;
+margin: 5px;
+font-size: 18px;
+
+}
+
+
+/* estilo de las tablas */
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid #333;
+    color: #ffffff;
+  }
+  
+ 
+  .styled-table th,
+  .styled-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #f7efef80;
+    
+  }
+  
+  .styled-table th {
+    background-color: #187605;
+    font-weight: bold;
+    text-transform: capitalize;
+  }

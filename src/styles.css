@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    background-color: rgb(27, 27, 27);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+    /* fondo de imagenes en cascada */
+  
+.image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .falling-image {
+    position: absolute;
+    animation: cascade 4s linear infinite;
+  }
+  
+  .falling-image img {
+    width: 100px; /* Ajusta el tamaño de la imagen */
+  }
+  
+  .falling-image:nth-child(1) {
+    left: 20%;
+    animation-delay: 0s;
+  }
+  
+  .falling-image:nth-child(2) {
+    left: 45%;
+    animation-delay: 1s;
+  }
+  
+  .falling-image:nth-child(3) {
+    left: 70%;
+    animation-delay: 2s;
+  }
+
+  .falling-image:nth-child(4) {
+    left: 30%;
+    animation-delay: 3s;
+  }
+  
+  .falling-image:nth-child(5) {
+    left: 50%;
+    animation-delay: 2.5s;
+  }
+  
+  @keyframes cascade {
+    0% {
+      transform: translateY(-400%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(400%);
+      opacity: 1;
+    }
+  }
